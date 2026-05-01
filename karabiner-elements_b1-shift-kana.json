@@ -1,0 +1,1100 @@
+{
+    "description": "B1: 左右シフトかな拡張",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "左シフトキー",
+            "from": { "key_code": "left_shift" },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "shifted",
+                        "value": true
+                    }
+                },
+                { "key_code": "left_shift" }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "shifted",
+                        "value": false
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "右シフトキー",
+            "from": { "key_code": "right_shift" },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "shifted",
+                        "value": true
+                    }
+                },
+                { "key_code": "right_shift" }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "shifted",
+                        "value": false
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] ぬ",
+            "from": {
+                "key_code": "w",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "n" },
+                {
+                    "key_code": "u",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] り",
+            "from": {
+                "key_code": "e",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "r" },
+                {
+                    "key_code": "i",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] め",
+            "from": {
+                "key_code": "r",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "m" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] 左",
+            "from": {
+                "key_code": "t",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "n",
+                    "modifiers": ["control", "shift"],
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] 右",
+            "from": {
+                "key_code": "y",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "p",
+                    "modifiers": ["control", "shift"],
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] さ",
+            "from": {
+                "key_code": "u",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "s" },
+                {
+                    "key_code": "a",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] よ",
+            "from": {
+                "key_code": "i",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "y" },
+                {
+                    "key_code": "o",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] え",
+            "from": {
+                "key_code": "o",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] ゆ",
+            "from": {
+                "key_code": "p",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "y" },
+                {
+                    "key_code": "u",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] せ",
+            "from": {
+                "key_code": "a",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "s" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] み",
+            "from": {
+                "key_code": "s",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "m" },
+                {
+                    "key_code": "i",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] に",
+            "from": {
+                "key_code": "d",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "n" },
+                {
+                    "key_code": "i",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] ま",
+            "from": {
+                "key_code": "f",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "DR",
+                        "value": true
+                    }
+                },
+                { "key_code": "m" },
+                {
+                    "key_code": "a",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "DR",
+                        "value": false
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] ち",
+            "from": {
+                "key_code": "g",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "t" },
+                {
+                    "key_code": "i",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] や",
+            "from": {
+                "key_code": "h",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "y" },
+                {
+                    "key_code": "a",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] の",
+            "from": {
+                "key_code": "j",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "DL",
+                        "value": true
+                    }
+                },
+                { "key_code": "n" },
+                {
+                    "key_code": "o",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "DL",
+                        "value": false
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] も",
+            "from": {
+                "key_code": "k",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "m" },
+                {
+                    "key_code": "o",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] つ",
+            "from": {
+                "key_code": "l",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "t" },
+                {
+                    "key_code": "u",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] ふ",
+            "from": {
+                "key_code": "semicolon",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "f" },
+                {
+                    "key_code": "u",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] を",
+            "from": {
+                "key_code": "c",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "w" },
+                {
+                    "key_code": "o",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] 、",
+            "from": {
+                "key_code": "v",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "comma",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] む",
+            "from": {
+                "key_code": "b",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "m" },
+                {
+                    "key_code": "u",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] お",
+            "from": {
+                "key_code": "n",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "o",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] 。",
+            "from": {
+                "key_code": "m",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "period" },
+                {
+                    "key_code": "return_or_enter",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] ね",
+            "from": {
+                "key_code": "comma",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "n" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[Sp] わ",
+            "from": {
+                "key_code": "period",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                { "key_code": "w" },
+                {
+                    "key_code": "a",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

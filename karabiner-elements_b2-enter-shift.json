@@ -1,0 +1,42 @@
+{
+    "description": "B2: エンター同時押しシフト拡張",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "エンターキー",
+            "from": { "key_code": "return_or_enter" },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "shifted",
+                        "value": true
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "shifted",
+                        "value": false
+                    }
+                }
+            ],
+            "to_if_alone": [{ "key_code": "return_or_enter" }],
+            "type": "basic"
+        }
+    ]
+}
