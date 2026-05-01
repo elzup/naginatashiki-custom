@@ -14286,6 +14286,463 @@
                     "name": "command",
                     "type": "variable_unless",
                     "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) む, え → みぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "s" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "m" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) り, え → りぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "e" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "r" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) し, え → しぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "r" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "s" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) き, え → きぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "w" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "k" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) に, え → にぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "d" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "n" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) ち, え → ちぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "g" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "t" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) ひ, え → ひぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "x" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "h" },
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) い, え → いぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "k" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "y" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) う, え → うぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "l" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "w" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) ー, え → ふぇ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "semicolon" },
+                    { "key_code": "o" }
+                ]
+            },
+            "to": [
+                { "key_code": "f" },
+                {
+                    "key_code": "e",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
                 }
             ],
             "description": "(シンクロ) 小, や → (ゃ)",
