@@ -14878,6 +14878,52 @@
                     "name": "command",
                     "type": "variable_unless",
                     "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "(シンクロ) て, い → てぃ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "e" },
+                    { "key_code": "k" }
+                ]
+            },
+            "to": [
+                { "key_code": "t" },
+                { "key_code": "h" },
+                {
+                    "key_code": "i",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
                 }
             ],
             "description": "(シンクロ) 小, や → (ゃ)",
