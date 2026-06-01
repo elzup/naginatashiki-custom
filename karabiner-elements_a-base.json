@@ -8199,6 +8199,69 @@
                     "value": true
                 }
             ],
+            "description": "(シンクロ) 左半, う, あ → うぁ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "v" },
+                    { "key_code": "l" },
+                    { "key_code": "j" }
+                ],
+                "simultaneous_options": {
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "HR",
+                                "value": false
+                            }
+                        }
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "HR",
+                        "value": true
+                    }
+                },
+                { "key_code": "w" },
+                { "key_code": "h" },
+                {
+                    "key_code": "a",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
             "description": "(シンクロ) 左半, い, え → いぇ",
             "from": {
                 "simultaneous": [
@@ -10895,6 +10958,57 @@
                 { "key_code": "h" },
                 {
                     "key_code": "o",
+                    "repeat": false
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "command",
+                        "type": "unset"
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "HR",
+                    "type": "variable_if",
+                    "value": true
+                },
+                {
+                    "input_sources": [{ "language": "ja" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "input_sources": [{ "input_mode_id": "Roman$" }],
+                    "type": "input_source_unless"
+                },
+                {
+                    "name": "command",
+                    "type": "variable_unless",
+                    "value": true
+                },
+                {
+                    "name": "shifted",
+                    "type": "variable_unless",
+                    "value": true
+                }
+            ],
+            "description": "[左半] (シンクロ) う, あ → うぁ",
+            "from": {
+                "simultaneous": [
+                    { "key_code": "l" },
+                    { "key_code": "j" }
+                ]
+            },
+            "to": [
+                { "key_code": "w" },
+                { "key_code": "h" },
+                {
+                    "key_code": "a",
                     "repeat": false
                 }
             ],
